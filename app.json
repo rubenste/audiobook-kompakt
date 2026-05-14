@@ -1,0 +1,40 @@
+{
+  "expo": {
+    "name": "mudita-audiobook-player",
+    "slug": "mudita-audiobook-player",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "backgroundColor": "#ffffff",
+    "userInterfaceStyle": "light",
+    "android": {
+      "package": "com.mudita.audiobookplayer",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "permissions": [
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.READ_MEDIA_AUDIO",
+        "android.permission.WAKE_LOCK",
+        "android.permission.MODIFY_AUDIO_SETTINGS"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-av",
+        {
+          "microphonePermission": false
+        }
+      ],
+      "expo-asset",
+      "expo-font"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "23911613-91d2-417d-a3d7-680bc49aa386"
+      }
+    }
+  }
+}
