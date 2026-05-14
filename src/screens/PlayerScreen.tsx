@@ -237,7 +237,7 @@ export default function PlayerScreen({ book, autoPlay }: Props) {
           </TouchableOpacity>
         </View>
 
-        <Text style={styles.chapterFilename} numberOfLines={1}>
+        <Text style={styles.chapterFilename} numberOfLines={3}>
           {currentChapter.filename}
         </Text>
       </View>
@@ -248,7 +248,7 @@ export default function PlayerScreen({ book, autoPlay }: Props) {
           <Text style={styles.speedText}>{formatSpeed(speed)}</Text>
         </TouchableOpacity>
 
-        {/* Non-interactive progress bar */}
+        {/* Progress bar: bordered outer track, black fill */}
         <View style={styles.progressTrack}>
           <View style={[styles.progressFill, { width: `${progressFraction * 100}%` }]} />
         </View>
@@ -357,6 +357,7 @@ const styles = StyleSheet.create({
     fontFamily: 'DMSans_400Regular',
     color: '#888',
     textAlign: 'center',
+    flexShrink: 1,
   },
   bottomArea: {
     paddingHorizontal: 20,
@@ -375,13 +376,20 @@ const styles = StyleSheet.create({
   },
   progressTrack: {
     width: '100%',
-    height: 4,
-    backgroundColor: '#ddd',
+    height: 8,
+    borderWidth: 2,
+    borderColor: '#000',
+    backgroundColor: '#fff',
+    borderRadius: 4,
     marginBottom: 10,
   },
   progressFill: {
-    height: 4,
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    bottom: 0,
     backgroundColor: '#000',
+    borderRadius: 2,
   },
   timeRow: {
     flexDirection: 'row',
@@ -396,27 +404,32 @@ const styles = StyleSheet.create({
   controls: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
+    gap: 10,
+    paddingHorizontal: 16,
   },
   skipBtn: {
-    height: 48,
-    paddingHorizontal: 14,
-    borderRadius: 999,
-    borderWidth: 1,
+    flex: 1,
+    height: 36,
+    borderRadius: 18,
+    backgroundColor: '#fff',
+    borderWidth: 2.5,
     borderColor: '#000',
     justifyContent: 'center',
     alignItems: 'center',
   },
   skipText: {
-    fontSize: 17,
-    fontFamily: 'DMSans_400Regular',
+    fontSize: 15,
+    fontFamily: 'DMSans_700Bold',
+    fontWeight: '700',
     color: '#000',
   },
   playBtn: {
-    width: 72,
-    height: 72,
-    borderRadius: 36,
+    width: 56,
+    height: 56,
+    borderRadius: 18,
     backgroundColor: '#000',
+    borderWidth: 2,
+    borderColor: '#000',
     justifyContent: 'center',
     alignItems: 'center',
   },

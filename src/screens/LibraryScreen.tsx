@@ -66,9 +66,8 @@ export default function LibraryScreen({ books, loading, onSelect }: Props) {
   };
 
   const renderBook = useCallback(({ item }: { item: Audiobook }) => {
-    const info   = bookInfos[item.folderUri];
-    const showPct = info?.status === 'in-progress' || info?.status === 'finished';
-    const pct    = showPct && info.progress != null ? `${info.progress}%` : null;
+    const info = bookInfos[item.folderUri];
+    const pct  = info?.progress != null ? `${info.progress}%` : null;
 
     return (
       <TouchableOpacity

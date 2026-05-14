@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { SafeAreaView, View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { useFonts, DMSans_400Regular, DMSans_700Bold } from '@expo-google-fonts/dm-sans';
 import LibraryScreen from './src/screens/LibraryScreen';
 import PlayerScreen from './src/screens/PlayerScreen';
@@ -12,11 +13,12 @@ type Tab = 'books' | 'player' | 'settings';
 
 export default function App() {
   const [fontsLoaded] = useFonts({ DMSans_400Regular, DMSans_700Bold });
+  useEffect(() => { if (fontsLoaded) console.log('[App] DM Sans fonts loaded'); }, [fontsLoaded]);
 
   const [books,        setBooks]        = useState<Audiobook[]>([]);
   const [loading,      setLoading]      = useState(true);
   const [selectedBook, setSelectedBook] = useState<Audiobook | null>(null);
-  const [activeTab,    setActiveTab]    = useState<Tab>('books');
+  const [activeTab,    setActiveTab]    = useState<Tab>('player');
   // Increments each time a new book is selected, forcing PlayerScreen to remount
   const [playerKey,   setPlayerKey]    = useState(0);
 
@@ -38,6 +40,7 @@ export default function App() {
   if (!fontsLoaded) return null;
 
   return (
+    <SafeAreaProvider>
     <SafeAreaView style={styles.root}>
       {/* All three screens stay mounted; only one is visible at a time */}
       <View style={[styles.screen, activeTab !== 'books'    && styles.hidden]}>
@@ -63,7 +66,9 @@ export default function App() {
         <SettingsScreen />
       </View>
 
-      {/* Bottom tab bar: 8dp black band + 2dp white divider + tab row */}
+      {/* 2dp white gap above the tab bar border, per spec */}
+      <View style={styles.tabPreDivider} />
+      {/* Bottom tab bar: 1dp border + tab row */}
       <View style={styles.tabBar}>
         <View style={styles.tabTopBand} />
         <View style={styles.tabWhiteDivider} />
@@ -89,6 +94,7 @@ export default function App() {
         </View>
       </View>
     </SafeAreaView>
+    </SafeAreaProvider>
   );
 }
 
@@ -141,10 +147,16 @@ const styles = StyleSheet.create({
     fontFamily: 'DMSans_400Regular',
     color: '#555',
   },
+  tabPreDivider: {
+    height: 2,
+    backgroundColor: '#fff',
+  },
   // Total bar height: 8 (black band) + 2 (white divider) + 18 (icon) + 2 (gap) + 15 (label) + 4 (indicator) + 8 (bottom) = 57
   tabBar: {
     flexDirection: 'column',
     backgroundColor: '#fff',
+    borderTopWidth: 1,
+    borderTopColor: '#000',
   },
   tabTopBand: {
     height: 8,
