@@ -5,6 +5,7 @@ export interface Chapter {
 
 export interface Audiobook {
   title: string;
+  author?: string;
   folderUri: string;
   chapters: Chapter[];
 }
