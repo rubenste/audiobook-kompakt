@@ -1,0 +1,13 @@
+<resources>
+    <!--
+      Minimal platform theme. The real styling lives in Compose via ThemeMMD;
+      this only needs to give us a white, action-bar-free window for the E Ink look.
+    -->
+    <style name="Theme.MuditaAudiobookPlayer" parent="@android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:statusBarColor">@android:color/white</item>
+        <item name="android:navigationBarColor">@android:color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+</resources>

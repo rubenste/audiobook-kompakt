@@ -1,0 +1,24 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Headphone band -->
+    <path
+        android:strokeColor="#000000"
+        android:strokeWidth="6"
+        android:fillColor="#00000000"
+        android:strokeLineCap="round"
+        android:pathData="M32,62 A22,22 0 0 1 76,62" />
+
+    <!-- Left ear cup -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M28,60 m0,2 a8,8 0 0 1 8,-8 h2 v26 h-2 a8,8 0 0 1 -8,-8 z" />
+
+    <!-- Right ear cup -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M80,60 m0,2 a8,8 0 0 0 -8,-8 h-2 v26 h2 a8,8 0 0 0 8,-8 z" />
+</vector>

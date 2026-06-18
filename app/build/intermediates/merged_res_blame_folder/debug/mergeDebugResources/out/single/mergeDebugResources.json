@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "/Users/ruben/.gradle/daemon/8.5/com.mudita.audiobookplayer.app-debug-59:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/ruben/.gradle/daemon/8.5/com.mudita.audiobookplayer.app-main-61:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/ruben/.gradle/daemon/8.5/com.mudita.audiobookplayer.app-debug-59:/drawable_ic_nav_books.xml.flat",
+        "source": "/Users/ruben/.gradle/daemon/8.5/com.mudita.audiobookplayer.app-main-61:/drawable/ic_nav_books.xml"
+    },
+    {
+        "merged": "/Users/ruben/.gradle/daemon/8.5/com.mudita.audiobookplayer.app-debug-59:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/ruben/.gradle/daemon/8.5/com.mudita.audiobookplayer.app-main-61:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/Users/ruben/.gradle/daemon/8.5/com.mudita.audiobookplayer.app-debug-59:/drawable_ic_chapter_next.xml.flat",
+        "source": "/Users/ruben/.gradle/daemon/8.5/com.mudita.audiobookplayer.app-main-61:/drawable/ic_chapter_next.xml"
+    },
+    {
+        "merged": "/Users/ruben/.gradle/daemon/8.5/com.mudita.audiobookplayer.app-debug-59:/drawable_ic_pause.xml.flat",
+        "source": "/Users/ruben/.gradle/daemon/8.5/com.mudita.audiobookplayer.app-main-61:/drawable/ic_pause.xml"
+    },
+    {
+        "merged": "/Users/ruben/.gradle/daemon/8.5/com.mudita.audiobookplayer.app-debug-59:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "/Users/ruben/.gradle/daemon/8.5/com.mudita.audiobookplayer.app-main-61:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.mudita.audiobookplayer.app-debug-59:/drawable_ic_check_circle.xml.flat",
+        "source": "com.mudita.audiobookplayer.app-main-61:/drawable/ic_check_circle.xml"
+    },
+    {
+        "merged": "/Users/ruben/.gradle/daemon/8.5/com.mudita.audiobookplayer.app-debug-59:/drawable_ic_chapter_prev.xml.flat",
+        "source": "/Users/ruben/.gradle/daemon/8.5/com.mudita.audiobookplayer.app-main-61:/drawable/ic_chapter_prev.xml"
+    }
+]
